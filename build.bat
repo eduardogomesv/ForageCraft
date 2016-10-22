@@ -2,4 +2,4 @@
 echo Building ForageCraft...
 call gradlew.bat build
 pause
-exit
+exit /b

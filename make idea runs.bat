@@ -7,4 +7,4 @@ call gradlew.bat genIntellijRuns
 echo
 echo Now that the runs have been generated, go back to IntelliJ IDEA and when a pop-up asks you to refresh the workspace, please do so.
 pause
-exit
+exit /b
