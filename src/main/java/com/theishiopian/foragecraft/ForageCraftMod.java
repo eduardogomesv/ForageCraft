@@ -1,6 +1,5 @@
 package com.theishiopian.foragecraft;
 
-
 import com.theishiopian.foragecraft.handler.BlockForageHandler;
 import com.theishiopian.foragecraft.handler.FuelHandler;
 import com.theishiopian.foragecraft.handler.PotatoPlanter;
