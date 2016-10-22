@@ -8,6 +8,8 @@ public class Client implements CommonProxy
 	@Override
 	public void init()
 	{
+		System.out.println("Initializing ForageCraft...");
+
 		ModBlocks.registerRenders();
 		ModItems.registerRenders();
 	}

@@ -20,11 +20,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid="foragecraft",name="ForageCraft",version="1.7")
+@Mod(modid=Reference.MODID,name=Reference.NAME,version=Reference.VERSION)
 
 public class ForageCraftMod 
 {
-	@SidedProxy(modId="foragecraft",clientSide="com.theishiopian.foragecraft.proxy.Client", serverSide="com.theishiopian.foragecraft.proxy.Server")
+	@SidedProxy(clientSide=Reference.CLIENTPROXY, serverSide=Reference.SERVERPROXY)
 	public static CommonProxy proxy;
 	
 	@EventHandler
