@@ -17,7 +17,7 @@ Installation with this mod is very very simple.
 
 # IntelliJ IDEA
 1. Double click on "setup workspace.bat" and let the batch script run.
-2. Open and click on open project/import project.
+2. Open and click on import project.
 3. Locate the build.gradle file and open it.
 4. No need to configure anything (unless you have a specific gradle home). Click on Finish.
 5. Leave IDEA open.
