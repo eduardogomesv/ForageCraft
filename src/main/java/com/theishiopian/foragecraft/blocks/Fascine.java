@@ -14,8 +14,8 @@ public class Fascine extends BlockRotatedPillar
 	{
 		super(Material.GRASS, MapColor.BROWN);
 		
-		setUnlocalizedName(Reference.Fascine.FASCINE.getUnlocalizedName());
-		setRegistryName(Reference.Fascine.FASCINE.getRegistryName());
+		setUnlocalizedName("fascine");
+		setRegistryName("fascine");
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		setSoundType(SoundType.PLANT);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(AXIS, EnumFacing.Axis.Y));

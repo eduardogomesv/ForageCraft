@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid=Reference.MODID,name=Reference.NAME,version=Reference.VERSION)
+//TODO: Use unlocalized names in en_US.lang instead of registry names.
 
 public class ForageCraftMod 
 {
