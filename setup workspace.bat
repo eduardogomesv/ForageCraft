@@ -1,5 +1,5 @@
 @echo off
 title Decompiling Minecraft...
-gradlew setupDecompWorkspace
+call gradlew.bat setupDecompWorkspace
 pause
 exit /b
