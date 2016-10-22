@@ -8,11 +8,13 @@ Examples include:
 
 ## Installation
 Installation with this mod is very very simple.
+
 # Eclipse
 1. Double click on "setup workspace.bat" and let the batch script run.
 2. Double click on "setup eclipse.bat" and let the batch script run.
 3. Open Eclipse and change your workspace to the eclipse folder.
 4. Boom shakalaka
+
 # IntelliJ IDEA
 1. Double click on "setup workspace.bat" and let the batch script run.
 2. Open and click on open project/import project.
