@@ -9,7 +9,7 @@
   "updateUrl": "https://raw.githubusercontent.com/theishiopian/ForageCraft/master/update.json",
   "authorList": ["theishiopian", "SansIsTyping"],
   "credits": "All the helpful people on the MC forums!",
-  "logoFile": "https://github.com/theishiopian/ForageCraft/raw/master/src/main/resources/assets/foragecraft/foragecraft.png",
+  "logoFile": "assets/foragecraft/foragecraft.png",
   "screenshots": [],
   "dependencies": []
 }
