@@ -7,7 +7,7 @@ Examples include:
 - Leaves now drop some sticks
 
 ## Installation
-Installation with this mod is very very simple.
+Installation with this mod is very very simple. Please make sure to not use "Download as ZIP" as this will not download the .git directory.
 
 ### Eclipse
 1. Double click on "setup workspace.bat" and let the batch script run.
