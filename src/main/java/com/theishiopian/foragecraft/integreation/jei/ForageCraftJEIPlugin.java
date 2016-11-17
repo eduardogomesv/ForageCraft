@@ -1,4 +1,4 @@
-package com.theishiopian.foragecraft;
+package com.theishiopian.foragecraft.integreation.jei;
 
 import javax.annotation.Nonnull;
 
