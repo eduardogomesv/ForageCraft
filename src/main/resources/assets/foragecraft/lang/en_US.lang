@@ -1,5 +1,24 @@
+# Blocks (tile)
+
+tile.scarecrow.name=Scarecrow
 tile.fascine.name=Fascine
 tile.straw_bale.name=Straw Bale
-tile.scarecrow.name=Scarecrow
+
+# Items (item)
+
 item.stick_bundle.name=Stick Bundle
 item.straw.name=Straw
+
+# JEI Localizations (jei)
+
+jei.description.foraging.stick=When foraging, sticks can be found in leaves, grass blocks, and dirt.
+jei.description.foraging.carrot=When foraging, carrots can be found in grass blocks.
+jei.description.foraging.potato=When foraging, potatoes can be found in grass blocks.
+jei.description.foraging.toxicpotato=When foraging, poisonous potatoes can be found in grass blocks.
+jei.description.foraging.beetroot=When foraging, beetroot can be found in grass blocks.
+jei.description.foraging.bone=When foraging, bones can be found in grass blocks and dirt.
+jei.description.foraging.skulls=When foraging, skeleton skulls can be found in grass blocks and dirt.
+jei.description.foraging.flint=When foraging, flint can be found in dirt and stone.
+jei.description.foraging.goldnugget=When foraging, gold nuggets can be found in stone and nether quartz ore.
+jei.description.foraging.diamond=When foraging, diamonds can be found in coal ore.
+jei.description.foraging.emerald=When foraging, emeralds can be found in coal ore.

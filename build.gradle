@@ -1,3 +1,5 @@
+ext.config = loadConfig(file('build.properties'))
+
 buildscript {
     repositories {
         jcenter()
@@ -10,12 +12,22 @@ buildscript {
     }
 }
 
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+repositories {
+	maven {
+		url "http://dvs1.progwml6.com/files/maven"
+	}
+}
+
+dependencies {
+	deobfCompile "mezz.jei:jei_${config.mc_version}:${config.jei_version}:api"
+	runtime "mezz.jei:jei_${config.mc_version}:${config.jei_version}"
+}
+
 import org.ajoberstar.grgit.*
 
-apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
-
-ext.config = loadConfig(file('build.properties'))
 
 version = "${config.mod_version}"
 group= "${config.mod_group}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
