@@ -19,7 +19,7 @@ public class ForageJEIPlugin extends BlankModPlugin
 
         IJeiHelpers jeiHelpers = registry.getJeiHelpers();
 
-        registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick")
+        registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick");
     }
 
     @Override
