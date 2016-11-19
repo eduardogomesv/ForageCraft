@@ -1,5 +1,14 @@
+# Blocks (tile)
+
+tile.scarecrow.name=Scarecrow
 tile.fascine.name=Fascine
 tile.straw_bale.name=Straw Bale
-tile.scarecrow.name=Scarecrow
+
+# Items (item)
+
 item.stick_bundle.name=Stick Bundle
 item.straw.name=Straw
+
+# JEI Localizations (jei)
+
+jei.description.foraging.stick=When foraging, the stick can be acquired from leaves, grass blocks, and dirt.
