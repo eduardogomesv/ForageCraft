@@ -10,10 +10,12 @@ Examples include:
 Installation with this mod is very very simple. Please make sure to not use "Download as ZIP" as this will not download the .git directory.
 
 ### Eclipse
-1. Double click on "setup workspace.bat" and let the batch script run.
-2. Double click on "setup eclipse.bat" and let the batch script run.
-3. Open Eclipse and change your workspace to the eclipse folder.
-4. Boom shakalaka
+There are some hiccups to the eclipse installation (MDK doesn't generate eclipse folder anymore) that are not allowing the eclipse workspace to be installed.
+Until we get this problem resolved, contributions (pull requests) to this problem are welcome.
+If you still want the install directions, here they are:
+1. Double click on "setup decomp workspace and eclipse.bat" and let the batch script run.
+2. Open Eclipse and change your workspace to the eclipse folder.
+3. Boom shakalaka
 
 ### IntelliJ IDEA
 1. Double click on "setup workspace.bat" and let the batch script run.
