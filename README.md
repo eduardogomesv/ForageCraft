@@ -13,6 +13,7 @@ Installation with this mod is very very simple. Please make sure to not use "Dow
 There are some hiccups to the eclipse installation (MDK doesn't generate eclipse folder anymore) that are not allowing the eclipse workspace to be installed.
 Until we get this problem resolved, contributions (pull requests) to this problem are welcome.
 If you still want the install directions, here they are:
+
 1. Double click on "setup decomp workspace and eclipse.bat" and let the batch script run.
 2. Open Eclipse and change your workspace to the eclipse folder.
 3. Boom shakalaka
