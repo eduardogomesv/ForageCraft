@@ -28,4 +28,9 @@ If you still want the install directions, here they are:
 7. Return to IDEA, and accept the pop-up which asks you to refresh the workspace.
 8. Boom shakalaka
 
+## Want to chat with us?
+We have a Discord server! Come talk about memes and the mod with us here.
+
+<a href="https://discord.gg/ym4Qdx4"><img src="https://i.imgur.com/M1YSZen.png" height="60"></a>
+
 More to come. This mod is WIP.
