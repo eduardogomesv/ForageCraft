@@ -1,4 +1,4 @@
-package com.theishiopian.foragecraft.integreation.jei;
+package com.theishiopian.foragecraft.integration.jei;
 
 import com.theishiopian.foragecraft.init.ModBlocks;
 import mezz.jei.api.BlankModPlugin;

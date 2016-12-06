@@ -1,4 +1,4 @@
-package com.theishiopian.foragecraft.integreation.jei;
+package com.theishiopian.foragecraft.integration.jei;
 
 import net.minecraftforge.fml.common.Loader;
 
