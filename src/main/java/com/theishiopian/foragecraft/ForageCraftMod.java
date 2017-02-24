@@ -9,7 +9,6 @@ import com.theishiopian.foragecraft.init.ModBlocks;
 import com.theishiopian.foragecraft.init.ModItems;
 import com.theishiopian.foragecraft.proxy.Client;
 import com.theishiopian.foragecraft.proxy.CommonProxy;
-import mezz.jei.api.JEIPlugin;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;

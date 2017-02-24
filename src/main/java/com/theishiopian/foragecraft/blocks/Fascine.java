@@ -1,6 +1,5 @@
 package com.theishiopian.foragecraft.blocks;
 
-import com.theishiopian.foragecraft.Reference;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;

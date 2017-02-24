@@ -4,12 +4,9 @@ import com.theishiopian.foragecraft.blocks.Fascine;
 import com.theishiopian.foragecraft.blocks.Scarecrow;
 import com.theishiopian.foragecraft.blocks.StrawBale;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

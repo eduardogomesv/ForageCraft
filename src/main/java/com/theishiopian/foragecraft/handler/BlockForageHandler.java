@@ -1,9 +1,6 @@
 package com.theishiopian.foragecraft.handler;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDeadBush;
-import net.minecraft.block.BlockGrass;
-import net.minecraft.block.BlockLeaves;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
