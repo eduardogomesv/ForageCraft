@@ -2,7 +2,6 @@ package com.theishiopian.foragecraft.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.util.EnumFacing;
 
 public class StickBundle extends Item
 {
