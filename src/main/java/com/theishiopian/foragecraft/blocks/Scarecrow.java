@@ -1,7 +1,6 @@
 package com.theishiopian.foragecraft.blocks;
 
 import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -9,7 +8,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
@@ -24,7 +22,9 @@ import com.theishiopian.foragecraft.world.ScarecrowTracking;
 
 public class Scarecrow extends BlockHorizontal
 {
-
+	
+	private final static AxisAlignedBB hitbox = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 2.0D, 1.0D);
+	
 	public Scarecrow() 
 	{
 		super(Material.WOOD);
@@ -32,7 +32,10 @@ public class Scarecrow extends BlockHorizontal
 		setRegistryName("scarecrow");
 		setCreativeTab(CreativeTabs.DECORATIONS);
 		setSoundType(SoundType.WOOD);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+		
 	}
+	
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
 	{
@@ -58,49 +61,61 @@ public class Scarecrow extends BlockHorizontal
 	{
 		return BlockRenderLayer.CUTOUT;
 	}
-	@Override
-    @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState state, World world, BlockPos pos) {
-        return getSelectedBoundingBox(state, world, pos);
-    }
-	@Override
-	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) 
-	{
-		 return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX()+1, pos.getY()+2, pos.getZ()+1);
-	}
 	
 	@Override
-	public IBlockState withRotation(IBlockState state, Rotation rot)
+    @SideOnly(Side.CLIENT)
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) 
+	{
+        //return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX()+1, pos.getY()+2, pos.getZ()+1);
+		return hitbox;
+	}
+
+	@Override
+	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos)
+    {
+        return hitbox;
+    }
+
+	
+	@Override
+    protected BlockStateContainer createBlockState()
+    {
+        return new BlockStateContainer(this, new IProperty[] {FACING});
+    }
+	
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+    {
+        return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
+    }
+
+    @Override
+    public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
     }
 
-	@Override
+    @Override
     public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
     {
         return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));
     }
 
-	@Override
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    @Override
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 
-	@Override
+    @Override
     public IBlockState getStateFromMeta(int meta)
     {
         return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
     }
 
-	@Override
+    @Override
     public int getMetaFromState(IBlockState state)
     {
         return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
-    }
-
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, new IProperty[] {FACING});
     }
 }
