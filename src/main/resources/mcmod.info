@@ -6,7 +6,7 @@
   "version": "The Knowledge Update",
   "mcversion": "1.9 - 1.10.2",
   "url": "https://minecraft.curseforge.com/projects/foragecraft",
-  "updateUrl": "https://sansistyping.me/foragecraft/update.json",
+  "updateUrl": "https://raw.githubusercontent.com/theishiopian/ForageCraft/master/update.json",
   "authorList": ["theishiopian", "Jonathan Colmenares"],
   "credits": "All the helpful people on the MC forums!",
   "logoFile": "assets/foragecraft/foragecraft.png",
