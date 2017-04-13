@@ -1,8 +1,6 @@
 package com.theishiopian.foragecraft.world;
 
 import java.util.LinkedHashSet;
-import java.util.List;
-import javax.annotation.Nullable;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;

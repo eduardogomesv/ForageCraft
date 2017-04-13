@@ -1,9 +1,8 @@
 package com.theishiopian.foragecraft.init;
 
-import com.theishiopian.foragecraft.blocks.Fascine;
 import com.theishiopian.foragecraft.items.StickBundle;
 import com.theishiopian.foragecraft.items.Straw;
-import net.minecraft.client.Minecraft;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

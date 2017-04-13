@@ -1,14 +1,12 @@
 package com.theishiopian.foragecraft.integration.jei;
 
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.BlankModPlugin;
-import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IJeiRuntime;
 import mezz.jei.api.IModRegistry;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.Nonnull;
 
 @mezz.jei.api.JEIPlugin
 public class ForageJEIPlugin extends BlankModPlugin
@@ -16,7 +14,8 @@ public class ForageJEIPlugin extends BlankModPlugin
     @Override
     public void register(IModRegistry registry) {
 
-        IJeiHelpers jeiHelpers = registry.getJeiHelpers();
+        //IJeiHelpers jeiHelpers = registry.getJeiHelpers();
+    	//is this unused?
 
         registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick");
         registry.addDescription(new ItemStack(Items.CARROT), "jei.description.foraging.carrot");

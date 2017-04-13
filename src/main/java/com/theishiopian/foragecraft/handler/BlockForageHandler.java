@@ -1,5 +1,9 @@
 package com.theishiopian.foragecraft.handler;
 
+import java.util.Random;
+
+import com.theishiopian.foragecraft.ConfigVariables;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -7,11 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import java.util.Random;
-
-import com.theishiopian.foragecraft.ConfigVariables;
-import com.theishiopian.foragecraft.ForageCraftMod;
 
 public class BlockForageHandler
 {

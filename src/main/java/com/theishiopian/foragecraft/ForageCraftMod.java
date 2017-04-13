@@ -7,12 +7,10 @@ import com.theishiopian.foragecraft.handler.RecipeHandler;
 import com.theishiopian.foragecraft.handler.SpawnHandler;
 import com.theishiopian.foragecraft.init.ModBlocks;
 import com.theishiopian.foragecraft.init.ModItems;
-import com.theishiopian.foragecraft.proxy.Client;
 import com.theishiopian.foragecraft.proxy.CommonProxy;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
