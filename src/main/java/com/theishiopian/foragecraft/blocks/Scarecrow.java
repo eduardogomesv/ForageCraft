@@ -18,6 +18,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import javax.annotation.Nullable;
+
 import com.theishiopian.foragecraft.world.ScarecrowTracking;
 
 public class Scarecrow extends BlockHorizontal
@@ -63,7 +66,6 @@ public class Scarecrow extends BlockHorizontal
 	}
 	
 	@Override
-    @SideOnly(Side.CLIENT)
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
 	{
         //return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX()+1, pos.getY()+2, pos.getZ()+1);
@@ -75,7 +77,11 @@ public class Scarecrow extends BlockHorizontal
     {
         return hitbox;
     }
-
+	@Nullable @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+    {
+        return hitbox;
+    }
 	
 	@Override
     protected BlockStateContainer createBlockState()

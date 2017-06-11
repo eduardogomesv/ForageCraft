@@ -3,6 +3,8 @@
 tile.scarecrow.name=Scarecrow
 tile.fascine.name=Fascine
 tile.straw_bale.name=Straw Bale
+tile.rock_normal.name=Rock
+tile.rock_flat.name=Flat Rock
 
 # Items (item)
 
@@ -15,13 +17,13 @@ jei.description.foraging.stick=The best way to get sticks is to go straight to t
 
 jei.description.foraging.carrot=For hundreds of years, the testificate race has held a monopoly on carrots, potatoes, beetroots and various other root vegetables. The reason for this is that no one could find any seeds for them. However, one day a smart human put two and two together and realized that, as their name suggests, root veggies are found buried in the soil in nature. Carrots, being roots, are no exception to this, and can sometimes be found in the upper layers of soil while digging.
 
-jei.description.foraging.potato=The potato has been a staple crop of humanity for a very long time. This versatile vegetable, which can be found burried in the topsoil, can be used for dozens of different culinary applications, and is quite healthy. As if that wasn't enough, rumor has it that potatoes have latent electrical properties, and apparently make suprisingly effective projectiles.
+jei.description.foraging.potato=The potato has been a staple crop of humanity for a very long time. This versatile vegetable, which can be found burried in the topsoil, can be used for dozens of different culinary applications, and is quite healthy. As if that wasn't enough, rumor has it that potatoes have latent electrical properties, and apparently make surprisingly effective projectiles.
 
 jei.description.foraging.toxicpotato=Being root veggies, potatoes tend to absorb stuff from their soil. In areas where the soil contains various harmful substances, such as heavy metals, organic poisons, or political opinions, potato plants tend to build up toxins inside their normally edible roots. The reason for this is unclear. Perhaps it's an evolutionary defense mechanism? Regardless, while such poisonous potatoes are not good for eating, planting them in non toxic areas will ussually result in a crop of good old fashioned non toxic spuds.
 
 jei.description.foraging.beetroot=The beetroot is a mysterious plant, which until recently has been considered little more than myth. A small, red colored root vegetable, the beetroot is unlike other root veggies in that it can't reproduce by just planting peices of it in the ground, like with potatoes. Instead, the beetroot grows from a large, spherical seed. These seeds are supprisingly tough, and can survive for years just lying in the tall grass, until conditions are right for them to take root. Once they do, the seed breaks apart, and the beetroot tunnels into the topsoil. New seeds form in small clusters around the base of the plant, though the relatively small amount of them yeilded by a single plant can make farming difficult. Beetroots are most famous for their use in stew.
 
-jei.description.foraging.bone=Time is a cruel teacher, as all its students die in the end. When they do, their bodies decay until all thats left is their bones, which are eventually buried as nature grinds onwards. These ancient skeletons come in many sizes, from the massive ones left behind by creatures of legend in prehistoric swamplands, to the smaller ones belonging to the more mundane animals of the world, victims of the circle of life. Fortunately for you, these bones are packed with nutrients that plants find tasty. Bone appetit!
+jei.description.foraging.bone=Time is a cruel teacher, as all its students die in the end. When they do, their bodies decay until all thats left is their bones, which are eventually buried as nature grinds onwards. These ancient skeletons come in many sizes, from the massive ones left behind by creatures of legend in prehistoric swamplands, to the smaller ones belonging to the more mundane animals of the world, victims of the circle of life. Fortunately for you, these bones are packed with nutrients that plants find tasty. Bone-appetit!
 
 jei.description.foraging.skulls=While digging, you may come across old human skeletons. Who were these people? Were they other people trying to survive, just like you? Were they ancient warriors of story and song? Maybe they are just the remains of the skeletons brought to life every night by dark magic. Each skull has its own story. Think about that as you grind them up into bonemeal.
 

@@ -48,4 +48,10 @@ public class ConfigVariables
 		//nether quartz. where DO pig men get their gold in vanilla anyways???
 		public static float netherGoldChance;
 		public static int netherGoldMaxAmount;
+		
+		//seeds, cause I forgot them
+		public static boolean pumpkinSeeds;
+		public static boolean melonSeeds;
+		public static boolean beetrootSeeds;
+		//sticks from grass being removed 
 }

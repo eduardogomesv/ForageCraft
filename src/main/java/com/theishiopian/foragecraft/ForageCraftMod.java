@@ -6,13 +6,16 @@ import com.theishiopian.foragecraft.handler.PotatoPlanter;
 import com.theishiopian.foragecraft.handler.RecipeHandler;
 import com.theishiopian.foragecraft.handler.SpawnHandler;
 import com.theishiopian.foragecraft.init.ModBlocks;
+import com.theishiopian.foragecraft.init.ModEntities;
 import com.theishiopian.foragecraft.init.ModItems;
 import com.theishiopian.foragecraft.proxy.CommonProxy;
+import com.theishiopian.foragecraft.world.generation.FCMasterWorldGenerator;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -24,6 +27,9 @@ public class ForageCraftMod
 {
 	@SidedProxy(clientSide=Reference.CLIENTPROXY, serverSide=Reference.SERVERPROXY)
 	public static CommonProxy proxy;
+	
+	@Instance
+	public static ForageCraftMod instance;
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
@@ -81,12 +87,17 @@ public class ForageCraftMod
 		ConfigVariables.netherGoldChance = config.getFloat("Nether gold chance", "Nether gold", 1.0f, 0.0f, 1.0f, "The chance of getting gold (in nugget form) from nether quartz");
 		ConfigVariables.netherGoldMaxAmount = config.getInt("Maximum nether gold amount", "Nether gold", 9, 0, 64, "The maximum amount of gold nuggets you can get from nether quartz");
 		
+		//seeds from grass
+		ConfigVariables.pumpkinSeeds = config.getBoolean("Pumpkin seeds from grass", "Pumpkin seeds", true, "This determines whether or not you can find pumpkin seeds in grass");
+		ConfigVariables.melonSeeds = config.getBoolean("Melon seeds from grass", "Melon seeds", true, "This determines whether or not you can find melon seeds in grass");
+		ConfigVariables.beetrootSeeds = config.getBoolean("Beetroot seeds from grass", "Beetroot seeds", true, "This determines whether or not you can find beetroot seeds in grass");
 		config.save();
-		
-		ModBlocks.init();
-		ModBlocks.register();
+
 		ModItems.init();
 		ModItems.register();
+		ModBlocks.init();
+		ModBlocks.register();
+		ModEntities.init();
 		proxy.init();
 	}
 	
@@ -99,5 +110,6 @@ public class ForageCraftMod
 		RecipeHandler.Shapless();
 		SeedLoader.seed();
 		GameRegistry.registerFuelHandler(new FuelHandler());
+		GameRegistry.registerWorldGenerator(new FCMasterWorldGenerator(), 10);
 	}
 }
