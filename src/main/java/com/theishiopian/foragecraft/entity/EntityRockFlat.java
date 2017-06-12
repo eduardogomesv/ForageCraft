@@ -4,6 +4,7 @@ import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -24,6 +25,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityRockFlat extends EntityThrowable
 {
+	
 	public EntityRockFlat(World worldIn)
 	{
 		super(worldIn);
@@ -38,8 +40,6 @@ public class EntityRockFlat extends EntityThrowable
 	{
 		super(worldIn, x, y, z);
 	}
-	
-	
 
 	@SideOnly(Side.CLIENT)
 	public void handleStatusUpdate(byte id)
@@ -70,7 +70,7 @@ public class EntityRockFlat extends EntityThrowable
 					Material impactMaterial = world.getBlockState(result.getBlockPos()).getBlock()
 							.getMaterial(world.getBlockState(result.getBlockPos()));
 					Block impactBlock = world.getBlockState(result.getBlockPos()).getBlock();
-
+					
 					if(impactMaterial == Material.GLASS)
 					{
 						this.world.setBlockToAir(result.getBlockPos());
@@ -100,6 +100,22 @@ public class EntityRockFlat extends EntityThrowable
 				setDead();
 				world.spawnEntity(new EntityItem(world, this.posX, this.posY, this.posZ, refund));
 			}
+		}
+	}
+	
+	boolean skipped = false;
+	
+	@Override
+	public void onUpdate()
+	{
+		//needs work
+		super.onUpdate();
+		if(this.inWater&&!skipped)
+		{
+			this.motionY = Math.abs(this.motionY)+0.1;
+			
+	        skipped = true;
+	        
 		}
 	}
 }
