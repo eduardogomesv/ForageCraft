@@ -18,6 +18,7 @@ public class RecipeHandler {
 		Item scarecrow = Item.getByNameOrId("foragecraft:scarecrow");
 		Item pumpkin = Item.getItemFromBlock(Blocks.PUMPKIN);
 		Item leather = Items.LEATHER;
+		Item rock = Item.getByNameOrId("foragecraft:rock_normal");
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE,9,15),Items.SKULL);
 		GameRegistry.addShapelessRecipe(new ItemStack(bundle,1,0),stick,stick,stick,stick,stick,stick,stick,stick,stick);
@@ -29,5 +30,7 @@ public class RecipeHandler {
 		GameRegistry.addShapelessRecipe(new ItemStack(straw,9,0),bale);
 		GameRegistry.addShapedRecipe(new ItemStack(scarecrow,1,0), "LPL", "BFB", "LSL",'L',leather,'P',pumpkin,'B',bundle,'F',fascine,'S',stick);
 		GameRegistry.addShapedRecipe(new ItemStack(scarecrow,1,0), "LPL", "BFB", "LSL",'L',leather,'P',pumpkin,'B',bundle,'F',bale,'S',stick);
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.COBBLESTONE), rock, rock, rock, rock, rock, rock, rock, rock, rock);
+		GameRegistry.addShapelessRecipe(new ItemStack(rock, 9, 0), Blocks.COBBLESTONE);
 	}
 }
