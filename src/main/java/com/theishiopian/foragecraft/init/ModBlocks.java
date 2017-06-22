@@ -1,6 +1,7 @@
 package com.theishiopian.foragecraft.init;
 
 import com.theishiopian.foragecraft.blocks.Fascine;
+import com.theishiopian.foragecraft.blocks.RoadStone;
 import com.theishiopian.foragecraft.blocks.RockBlock;
 import com.theishiopian.foragecraft.blocks.Scarecrow;
 import com.theishiopian.foragecraft.blocks.StrawBale;
@@ -21,6 +22,7 @@ public class ModBlocks
 	public static Block scarecrow;
 	public static Block rock_normal;
 	public static Block rock_flat;
+	public static Block road_stone;
 	
 	public static enum RockType{NORMAL, FLAT};
 	
@@ -31,6 +33,7 @@ public class ModBlocks
 		scarecrow = new Scarecrow();
 		rock_normal = new RockBlock(RockType.NORMAL);
 		rock_flat = new RockBlock(RockType.FLAT);
+		road_stone = new RoadStone();
 	}
 	
 	public static void register()
@@ -40,6 +43,7 @@ public class ModBlocks
 		registerBlock(scarecrow);
 		splitRegisterBlock(rock_normal, new RockItem(rock_normal, RockType.NORMAL));
 		splitRegisterBlock(rock_flat, new RockItem(rock_flat, RockType.FLAT));
+		registerBlock(road_stone);
 	}
 	
 	private static void registerBlock(Block block)
@@ -63,6 +67,7 @@ public class ModBlocks
 		registerRender(scarecrow);
 		registerRender(rock_normal);
 		registerRender(rock_flat);
+		registerRender(road_stone);
 	}
 	
 	public static void registerRender(Block block)

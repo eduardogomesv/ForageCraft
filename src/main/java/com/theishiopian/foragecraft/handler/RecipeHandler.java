@@ -1,5 +1,7 @@
 package com.theishiopian.foragecraft.handler;
 
+import com.theishiopian.foragecraft.init.ModBlocks;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -19,7 +21,8 @@ public class RecipeHandler {
 		Item pumpkin = Item.getItemFromBlock(Blocks.PUMPKIN);
 		Item leather = Items.LEATHER;
 		Item rock = Item.getByNameOrId("foragecraft:rock_normal");
-		
+		Item flat = Item.getByNameOrId("foragecraft:rock_flat");
+		//TODO cleanup a bit
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE,9,15),Items.SKULL);
 		GameRegistry.addShapelessRecipe(new ItemStack(bundle,1,0),stick,stick,stick,stick,stick,stick,stick,stick,stick);
 		GameRegistry.addShapelessRecipe(new ItemStack(stick,9,0),bundle);
@@ -32,5 +35,7 @@ public class RecipeHandler {
 		GameRegistry.addShapedRecipe(new ItemStack(scarecrow,1,0), "LPL", "BFB", "LSL",'L',leather,'P',pumpkin,'B',bundle,'F',bale,'S',stick);
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.COBBLESTONE), rock, rock, rock, rock, rock, rock, rock, rock, rock);
 		GameRegistry.addShapelessRecipe(new ItemStack(rock, 9, 0), Blocks.COBBLESTONE);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.road_stone), flat, flat, flat, flat, flat, flat, flat, flat, flat);
+		GameRegistry.addShapelessRecipe(new ItemStack(flat, 9, 0), ModBlocks.road_stone);
 	}
 }
