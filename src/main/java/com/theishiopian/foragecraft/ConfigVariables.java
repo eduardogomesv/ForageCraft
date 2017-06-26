@@ -13,6 +13,10 @@ public class ConfigVariables
 		//grass block
 		public static float rootChance;
 		public static int rootMaxAmount;
+		
+		public static float rockChance;
+		public static int rockMaxAmount;
+		
 		public static float wildCarrotChance;
 		public static int wildCarrotMaxAmount;
 		public static float wildPotatoChance;

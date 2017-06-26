@@ -3,6 +3,7 @@ package com.theishiopian.foragecraft.handler;
 import java.util.Random;
 
 import com.theishiopian.foragecraft.ConfigVariables;
+import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -40,6 +41,10 @@ public class BlockForageHandler
 				{
 					event.getDrops().add(new ItemStack(Items.STICK,AMOUNT.nextInt(ConfigVariables.rootMaxAmount+1)));
 				}
+				if(CHANCE.nextFloat()<ConfigVariables.rockChance)
+				{
+					event.getDrops().add(new ItemStack(ModBlocks.rock_normal,AMOUNT.nextInt(ConfigVariables.rockMaxAmount+1)));
+				}
 				if(CHANCE.nextFloat()<ConfigVariables.wildCarrotChance)
 				{
 					event.getDrops().add(new ItemStack(Items.CARROT,AMOUNT.nextInt(ConfigVariables.wildCarrotMaxAmount+1)));
@@ -69,6 +74,10 @@ public class BlockForageHandler
 				{
 					event.getDrops().add(new ItemStack(Items.STICK,AMOUNT.nextInt(ConfigVariables.deepRootMaxAmount+1)));
 				}
+				if(CHANCE.nextFloat()<ConfigVariables.rockChance)
+				{
+					event.getDrops().add(new ItemStack(ModBlocks.rock_normal,AMOUNT.nextInt(ConfigVariables.rockMaxAmount+1)));
+				}
 				if(CHANCE.nextFloat()<ConfigVariables.buriedFlintChance)
 				{
 					event.getDrops().add(new ItemStack(Items.FLINT,AMOUNT.nextInt(ConfigVariables.buriedFlintMaxAmount+1)));
@@ -85,6 +94,10 @@ public class BlockForageHandler
 				if(CHANCE.nextFloat()<ConfigVariables.goldChance)
 				{
 					event.getDrops().add(new ItemStack(Items.GOLD_NUGGET,AMOUNT.nextInt(ConfigVariables.goldMaxAmount+1)));
+				}
+				if(CHANCE.nextFloat()<ConfigVariables.rockChance)
+				{
+					event.getDrops().add(new ItemStack(ModBlocks.rock_normal,AMOUNT.nextInt(ConfigVariables.rockMaxAmount+1)));
 				}
 				if(CHANCE.nextFloat()<ConfigVariables.flintChipChance)
 				{
@@ -109,6 +122,14 @@ public class BlockForageHandler
 				if(CHANCE.nextFloat()<ConfigVariables.netherGoldChance)
 				{
 				event.getDrops().add(new ItemStack(Items.GOLD_NUGGET,AMOUNT.nextInt(ConfigVariables.netherGoldMaxAmount+1)));
+				}
+			}
+			//gravel handler
+			if(target==Blocks.GRAVEL)
+			{
+				if(CHANCE.nextFloat()<ConfigVariables.rockChance)
+				{
+					event.getDrops().add(new ItemStack(ModBlocks.rock_normal,AMOUNT.nextInt(ConfigVariables.rockMaxAmount+1)));
 				}
 			}
 		}	

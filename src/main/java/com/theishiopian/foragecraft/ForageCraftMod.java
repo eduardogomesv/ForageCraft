@@ -45,6 +45,9 @@ public class ForageCraftMod
 		ConfigVariables.rootChance = config.getFloat("Root chance", "Sticks from grass blocks", 0.09f, 0.0f, 1.0f, "The chance of digging up a root (stick) from a grass block");
 		ConfigVariables.rootMaxAmount=config.getInt("Maximum root amount", "Sticks from grass blocks", 1, 0, 64, "The maximum amount of roots (sticks) you can get from a grass block");
 		
+		ConfigVariables.rockChance = config.getFloat("Rock chance", "Rocks from various blocks", 0.09f, 0.0f, 1.0f, "The chance of digging up a rock");
+		ConfigVariables.rockMaxAmount=config.getInt("Maximum rock amount", "Rocks from various blocks", 1, 0, 64, "The maximum amount of rocks you can get from various blocks");
+		
 		ConfigVariables.wildCarrotChance = config.getFloat("Carrot chance", "Carrots from grass blocks", 0.01f, 0.0f, 1.0f, "The chance of digging up a carrot from a grass block");
 		ConfigVariables.wildCarrotMaxAmount = config.getInt("Maximum carrot amount", "Carrots from grass blocks", 1, 0, 64, "The maximum amount of carrots you can get from a grass block");
 		
