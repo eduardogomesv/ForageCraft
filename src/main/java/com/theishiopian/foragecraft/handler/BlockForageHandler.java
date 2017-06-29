@@ -27,7 +27,7 @@ public class BlockForageHandler
 		{
 			Block target = event.getState().getBlock();
 			//leaves handler
-			if(target==Blocks.LEAVES)
+			if(target==Blocks.LEAVES||target==Blocks.LEAVES2)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.branchChance)
 				{
