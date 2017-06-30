@@ -21,7 +21,7 @@ public class RoadStone extends Block
 		setSoundType(SoundType.STONE);
 	}
 	
-	 public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
+	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
     {
         super.onEntityWalk(worldIn, pos, entityIn);
         
