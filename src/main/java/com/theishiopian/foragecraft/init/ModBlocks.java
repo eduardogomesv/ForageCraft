@@ -1,5 +1,6 @@
 package com.theishiopian.foragecraft.init;
 
+import com.theishiopian.foragecraft.blocks.BlockStick;
 import com.theishiopian.foragecraft.blocks.Fascine;
 import com.theishiopian.foragecraft.blocks.RoadStone;
 import com.theishiopian.foragecraft.blocks.RockBlock;
@@ -23,6 +24,7 @@ public class ModBlocks
 	public static Block rock_normal;
 	public static Block rock_flat;
 	public static Block road_stone;
+	public static Block stick_block;
 	
 	public static enum RockType{NORMAL, FLAT};
 	
@@ -34,6 +36,7 @@ public class ModBlocks
 		rock_normal = new RockBlock(RockType.NORMAL);
 		rock_flat = new RockBlock(RockType.FLAT);
 		road_stone = new RoadStone();
+		stick_block = new BlockStick();
 	}
 	
 	public static void register()
@@ -44,6 +47,7 @@ public class ModBlocks
 		splitRegisterBlock(rock_normal, new RockItem(rock_normal, RockType.NORMAL));
 		splitRegisterBlock(rock_flat, new RockItem(rock_flat, RockType.FLAT));
 		registerBlock(road_stone);
+		registerBlock(stick_block);
 	}
 	
 	private static void registerBlock(Block block)
@@ -68,6 +72,7 @@ public class ModBlocks
 		registerRender(rock_normal);
 		registerRender(rock_flat);
 		registerRender(road_stone);
+		registerRender(stick_block);
 	}
 	
 	public static void registerRender(Block block)
