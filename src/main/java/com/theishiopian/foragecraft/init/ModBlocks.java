@@ -7,7 +7,6 @@ import com.theishiopian.foragecraft.blocks.RockBlock;
 import com.theishiopian.foragecraft.blocks.Scarecrow;
 import com.theishiopian.foragecraft.blocks.StrawBale;
 import com.theishiopian.foragecraft.items.RockItem;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

@@ -68,7 +68,6 @@ public class Scarecrow extends BlockHorizontal
 	@Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
 	{
-        //return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX()+1, pos.getY()+2, pos.getZ()+1);
 		return hitbox;
 	}
 
