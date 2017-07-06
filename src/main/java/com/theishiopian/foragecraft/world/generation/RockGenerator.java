@@ -10,6 +10,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.BiomeDictionary;
 
 //Based on sky_01's MC forums tutorial: 
 //http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2666351-1-8-x-and-1-9-structure-generation-tutorial
@@ -38,7 +39,12 @@ public class RockGenerator extends WorldGenerator
 
 		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && worldIn.getBlockState(rp.down()).isSideSolid(worldIn, pos, EnumFacing.UP))
 		{
-			worldIn.setBlockState(rp, rock.getDefaultState(), 2);
+			//TODO: add sandstone rocks or something similar
+			if(!BiomeDictionary.hasType(worldIn.getBiome(pos), BiomeDictionary.Type.SANDY))
+				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
+			else if(!worldIn.canSeeSky(pos))
+				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
+			
 			//System.out.println("Generating rock at /tp "+rp.getX()+" "+rp.getY()+" "+rp.getZ());
 		}
 

@@ -1,12 +1,12 @@
 package com.theishiopian.foragecraft.world.generation;
 
 import java.util.Random;
-
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 //Based on sky_01's MC forums tutorial: 
@@ -34,7 +34,6 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 				generateEnd(world, random, blockX, blockZ);
 			break;
 		}
-
 	}
 
 	private void generateNether(World world, Random rand, int blockX, int blockZ)
@@ -47,18 +46,38 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 
 
 		WorldGenerator rocky = new RockGenerator();
+		WorldGenerator sticky = new StickGenerator();
 
 		int MIN = 32;
 		int MAX = 1024;
 		int rockRange = MIN + rand.nextInt(MAX - MIN);
-
+		int stickRange = MIN + rand.nextInt(MAX - MIN);
+		BlockPos biomeCheckPos = new BlockPos(blockX, 64, blockZ);
+		
+		//rocks can be found everywhere, even mushroom isles
 		for (int i = 0; i < rockRange; i++)
 		{
+			
 			int randX = blockX + rand.nextInt(16);
 			int randY = rand.nextInt(255);
 			int randZ = blockZ + rand.nextInt(16);
+			BlockPos pos = new BlockPos(randX, randY, randZ);
+			rocky.generate(world, rand, pos);
+		}
+		
+		if
+		(
+			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.FOREST)||
+			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.JUNGLE)||
+			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.SWAMP)
+		)
+		for (int i = 0; i < stickRange; i++)
+		{
+			int randX = blockX + rand.nextInt(16);
+			int randY = rand.nextInt(255);//I long for cubic chunks :(
+			int randZ = blockZ + rand.nextInt(16);
 			
-			rocky.generate(world, rand, new BlockPos(randX, randY, randZ));
+			sticky.generate(world, rand, new BlockPos(randX, randY, randZ));
 		}
 
 	}
@@ -67,5 +86,4 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 	{
 
 	}
-
 }
