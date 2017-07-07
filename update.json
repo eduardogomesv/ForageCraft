@@ -21,6 +21,7 @@
     },
     "1.11.2": {
         "1.11": "Added compatability for Minecraft 1.11.2"
+		"1.12.1": "Fixed acacia/dark oak leaves bug. Added rocks and sticks."
     },
     "homepage": "https://minecraft.curseforge.com/projects/foragecraft",
     "promos": {
@@ -33,6 +34,6 @@
         "1.10.2-latest": "1.10",
         "1.10.2-recommended": "1.10"
         "1.11.2-latest": "1.11",
-        "1.11.2-recommended": "1.11"
+        "1.11.2-recommended": "1.12.1"
     }
 }
