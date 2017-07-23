@@ -90,7 +90,7 @@ public class ScarecrowTracking extends WorldSavedData
 	{
 		for(BlockPos pos : scarecrowLocations)
 		{
-			if(entity.getEntityBoundingBox().intersectsWith(new AxisAlignedBB(pos).expandXyz(64)))
+			if(entity.getEntityBoundingBox().intersects(new AxisAlignedBB(pos).expand(64,64,64)))
 			{
 				return true;
 			}
