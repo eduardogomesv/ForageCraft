@@ -6,31 +6,35 @@ Examples include:
 - Ancient bones can be dug up from the dirt
 - Leaves now drop some sticks
 
+## Contribution
+Feel free to leave pull requests (implying you know how to) with contributions to this mod. Pull requests are reviewed by me and then accepted or denied by Theishiopian.
+Please note the following:
+- We are currently not accepting any new developers to directly contribute to this mod. If you really want to contact Theishiopian for a request to be a developer, go ahead, but your request will most likely be denied.
+- Invalid issues will be marked as invalid and will either be closed by me or Theishiopian.
+
 ## Installation
-Installation with this mod is very very simple. Please make sure to not use "Download as ZIP" as this will not download the .git directory.
+If you would like to install the in-development version of ForageCraft, please follow the following instructions. I advice that you do not "Download as ZIP" as this will not download the .git directory.
 
 ### Eclipse
-There are some hiccups to the eclipse installation (MDK doesn't generate eclipse folder anymore) that are not allowing the eclipse workspace to be installed.
-Until we get this problem resolved, contributions (pull requests) to this problem are welcome.
-If you still want the install directions, here they are:
-
-1. Double click on "setup decomp workspace and eclipse.bat" and let the batch script run.
+1. Double click on "setup_decomp_workspace_and_eclipse.bat" and let the batch script run.
 2. Open Eclipse and change your workspace to the eclipse folder.
-3. Boom shakalaka
 
 ### IntelliJ IDEA
-1. Double click on "setup workspace.bat" and let the batch script run.
+1. Double click on "setup_decomp_workspace.bat" and let the batch script run.
 2. Open and click on import project.
 3. Locate the build.gradle file and open it.
 4. No need to configure anything (unless you have a specific gradle home). Click on Finish.
 5. Leave IDEA open.
-6. Double click on "make idea runs.bat" and let the batch script run.
+6. Double click on "make_intellij_runs.bat" and let the batch script run.
 7. Return to IDEA, and accept the pop-up which asks you to refresh the workspace.
-8. Boom shakalaka
 
 ## Want to chat with us?
 We have a Discord server! Come talk about memes and the mod with us here.
 
-<a href="https://discord.gg/ym4Qdx4"><img src="https://i.imgur.com/M1YSZen.png" height="60"></a>
+<a href="https://discord.gg/V3REwZs"><img src="https://i.imgur.com/M1YSZen.png" height="60"></a>
 
-More to come. This mod is WIP.
+## Enjoy!
+Thank you for stopping by! We hope you enjoy ForageCraft for Minecraft.
+Cheers,
+Jonathan
+Manager of ForageCraft
