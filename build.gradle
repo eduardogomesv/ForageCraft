@@ -4,7 +4,6 @@ buildscript {
     repositories {
         jcenter()
         maven { url = "http://files.minecraftforge.net/maven" }
-		flatDir { dirs 'libraries' }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
@@ -48,7 +47,7 @@ minecraft {
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
     mappings = "${config.forge_mappings}"
-    // makeObfSourceJar = "${config.make_source_jar}" // an Srg named sources jar is made by default. uncomment this to disable.
+    makeObfSourceJar = "${config.make_source_jar}" // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 dependencies {
