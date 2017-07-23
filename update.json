@@ -20,8 +20,9 @@
         "1.10.0.1": "Reduced file size."
     },
     "1.11.2": {
-        "1.11": "Added compatability for Minecraft 1.11.2"
-		"1.12.1": "Fixed acacia/dark oak leaves bug. Added rocks and sticks."
+        "1.11": "Added compatability for Minecraft 1.11.2",
+		"1.12.1": "Fixed acacia/dark oak leaves bug. Added rocks and sticks.",
+		"1.12.2": "Fixed stick block bug."
     },
     "homepage": "https://minecraft.curseforge.com/projects/foragecraft",
     "promos": {
@@ -32,7 +33,7 @@
         "1.10-latest": "1.10.0.1",
         "1.10-recommended": "1.10.0.1",
         "1.10.2-latest": "1.10",
-        "1.10.2-recommended": "1.10"
+        "1.10.2-recommended": "1.10",
         "1.11.2-latest": "1.11",
         "1.11.2-recommended": "1.12.1"
     }
