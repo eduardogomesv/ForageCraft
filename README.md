@@ -1,5 +1,6 @@
 # ForageCraft
 This mod aims to make survival mode easier by giving various blocks extra drops.
+
 Examples include:
 - Carrots and potatoes can be found in grass blocks
 - Pumpkin and melon seeds can be found in tall grass
@@ -8,6 +9,7 @@ Examples include:
 
 ## Contribution
 Feel free to leave pull requests (implying you know how to) with contributions to this mod. Pull requests are reviewed by me and then accepted or denied by Theishiopian.
+
 Please note the following:
 - We are currently not accepting any new developers to directly contribute to this mod. If you really want to contact Theishiopian for a request to be a developer, go ahead, but your request will most likely be denied.
 - Invalid issues will be marked as invalid and will either be closed by me or Theishiopian.
@@ -35,6 +37,9 @@ We have a Discord server! Come talk about memes and the mod with us here.
 
 ## Enjoy!
 Thank you for stopping by! We hope you enjoy ForageCraft for Minecraft.
+
 Cheers,
+
 Jonathan
+
 Manager of ForageCraft
