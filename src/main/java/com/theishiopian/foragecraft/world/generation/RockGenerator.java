@@ -2,6 +2,7 @@ package com.theishiopian.foragecraft.world.generation;
 
 import java.util.Random;
 
+import com.theishiopian.foragecraft.ConfigVariables;
 import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -44,8 +45,11 @@ public class RockGenerator extends WorldGenerator
 				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
 			else if(!worldIn.canSeeSky(pos))
 				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
-			
-			//System.out.println("Generating rock at /tp "+rp.getX()+" "+rp.getY()+" "+rp.getZ());
+
+			if(ConfigVariables.developerMode)
+			{
+				System.out.println("Generating rock at X: " + rp.getX() + " Y: " + rp.getY() + " Z: " + rp.getZ());
+			}
 		}
 
 		return false;

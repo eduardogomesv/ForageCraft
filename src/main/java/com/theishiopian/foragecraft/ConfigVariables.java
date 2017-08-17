@@ -59,6 +59,9 @@ public class ConfigVariables
 		public static boolean beetrootSeeds;
 		//sticks from grass being removed
 
+		//Developer mode because I'm smart
+		public static boolean developerMode;
+
 		//JEI force stop vanilla
 		public static boolean jeiInt;
 

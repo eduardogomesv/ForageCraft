@@ -2,6 +2,7 @@ package com.theishiopian.foragecraft.world.generation;
 
 import java.util.Random;
 
+import com.theishiopian.foragecraft.ConfigVariables;
 import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -29,7 +30,11 @@ public class StickGenerator extends WorldGenerator
 		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && (worldIn.getBlockState(sp.down()).isSideSolid(worldIn, pos, EnumFacing.UP)&&worldIn.getBlockState(sp.down()).getBlock()==Blocks.GRASS)&&pos.getY()>64)
 		{
 			worldIn.setBlockState(pos, stick.getDefaultState().withProperty(BlockPumpkin.FACING, EnumFacing.Plane.HORIZONTAL.random(rand)), 2);
-			// System.out.println("Generating stick at /tp "+sp.getX()+" "+sp.getY()+" "+sp.getZ());
+
+			if(ConfigVariables.developerMode)
+			{
+				System.out.println("Generating rock at X: " + sp.getX() + " Y: " + sp.getY() + " Z: " + sp.getZ());
+			}
 		}
 
 		return false;

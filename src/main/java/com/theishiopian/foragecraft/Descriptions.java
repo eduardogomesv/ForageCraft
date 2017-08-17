@@ -61,6 +61,9 @@ public class Descriptions
     public static final String configMelonSeeds = "This determines whether or not you can find melon seeds in grass";
     public static final String configBeetrootSeeds = "This determines whether or not you can find beetroot seeds in grass";
 
+    // Developer
+    public static final String configDeveloperMode = "Developer mode logs world generation of sticks and rocks to the console";
+
     // Mod Integration
     public static final String configJeiInt = "This determines whether or not JEI Integration should be enabled for vanilla items";
 

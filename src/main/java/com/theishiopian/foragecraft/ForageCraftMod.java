@@ -101,6 +101,9 @@ public class ForageCraftMod
 		ConfigVariables.melonSeeds = config.getBoolean("Melon seeds from grass", "Melon seeds", true, Descriptions.configMelonSeeds);
 		ConfigVariables.beetrootSeeds = config.getBoolean("Beetroot seeds from grass", "Beetroot seeds", true, Descriptions.configBeetrootSeeds);
 
+		// Developer
+		ConfigVariables.developerMode = config.getBoolean("Developer Mode", "development", false, Descriptions.configDeveloperMode);
+
 		// Mod Integration
 		ConfigVariables.jeiInt = config.getBoolean("JEI Integration", "Mod Integration", false, Descriptions.configJeiInt);
 
