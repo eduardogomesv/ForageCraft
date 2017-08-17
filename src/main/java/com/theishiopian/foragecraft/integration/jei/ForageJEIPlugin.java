@@ -19,7 +19,7 @@ public class ForageJEIPlugin extends BlankModPlugin
     	//is this unused?
         //I think so
 
-        if(ConfigVariables.jeiInt) {
+        if(ConfigVariables.jeiVanillaInt) {
             registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick");
             registry.addDescription(new ItemStack(Items.CARROT), "jei.description.foraging.carrot");
             registry.addDescription(new ItemStack(Items.POTATO), "jei.description.foraging.potato");

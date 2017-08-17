@@ -65,7 +65,7 @@ public class Descriptions
     public static final String configDeveloperMode = "Developer mode logs world generation of sticks and rocks to the console";
 
     // Mod Integration
-    public static final String configJeiInt = "This determines whether or not JEI Integration should be enabled for vanilla items";
+    public static final String configJeiVanillaInt = "This determines whether or not JEI Integration should be enabled for vanilla items";
 
     // World Generation
     public static final String configEnableSticks = "This determines whether or not sticks should be generated";

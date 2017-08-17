@@ -105,7 +105,7 @@ public class ForageCraftMod
 		ConfigVariables.developerMode = config.getBoolean("Developer Mode", "development", false, Descriptions.configDeveloperMode);
 
 		// Mod Integration
-		ConfigVariables.jeiInt = config.getBoolean("JEI Integration", "Mod Integration", false, Descriptions.configJeiInt);
+		ConfigVariables.jeiVanillaInt = config.getBoolean("JEI Integration", "Mod Integration", false, Descriptions.configJeiVanillaInt);
 
 		// World Generation
 		ConfigVariables.enableSticks = config.getBoolean("Sticks generation", "World Generation", true, Descriptions.configEnableSticks);

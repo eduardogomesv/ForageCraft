@@ -63,7 +63,7 @@ public class ConfigVariables
 		public static boolean developerMode;
 
 		//JEI force stop vanilla
-		public static boolean jeiInt;
+		public static boolean jeiVanillaInt;
 
 		//Disable sticks or rocks
 		public static boolean enableSticks;
