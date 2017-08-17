@@ -56,7 +56,7 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		BlockPos biomeCheckPos = new BlockPos(blockX, 64, blockZ);
 		
 		//If the player decides to disable rocks.
-		if(!ConfigVariables.disableRocks)
+		if(ConfigVariables.enableRocks)
 		{
 			//rocks can be found everywhere, even mushroom isles
 			for (int i = 0; i < rockRange; i++)
@@ -78,7 +78,7 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		)
 
 		//If the player decides to disable sticks
-		if(!ConfigVariables.disableSticks)
+		if(ConfigVariables.enableSticks)
 		{
 			for (int i = 0; i < stickRange; i++)
 			{

@@ -29,7 +29,7 @@ public class StickGenerator extends WorldGenerator
 		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && (worldIn.getBlockState(sp.down()).isSideSolid(worldIn, pos, EnumFacing.UP)&&worldIn.getBlockState(sp.down()).getBlock()==Blocks.GRASS)&&pos.getY()>64)
 		{
 			worldIn.setBlockState(pos, stick.getDefaultState().withProperty(BlockPumpkin.FACING, EnumFacing.Plane.HORIZONTAL.random(rand)), 2);
-			System.out.println("Generating stick at /tp "+sp.getX()+" "+sp.getY()+" "+sp.getZ());
+			// System.out.println("Generating stick at /tp "+sp.getX()+" "+sp.getY()+" "+sp.getZ());
 		}
 
 		return false;

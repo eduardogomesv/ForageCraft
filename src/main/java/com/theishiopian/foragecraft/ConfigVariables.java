@@ -60,9 +60,9 @@ public class ConfigVariables
 		//sticks from grass being removed
 
 		//JEI force stop vanilla
-		public static boolean jeiNoInt;
+		public static boolean jeiInt;
 
 		//Disable sticks or rocks
-		public static boolean disableSticks;
-		public static boolean disableRocks;
+		public static boolean enableSticks;
+		public static boolean enableRocks;
 }

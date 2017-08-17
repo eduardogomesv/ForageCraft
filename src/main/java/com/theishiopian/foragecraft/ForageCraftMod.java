@@ -21,7 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-//Unused imports?
+// Unused imports?
 import net.minecraftforge.common.config.Config;
 
 @Mod(modid=Reference.MODID,name=Reference.NAME,version=Reference.VERSION,acceptedMinecraftVersions=Reference.MC_VERSIONS,updateJSON=Reference.UPDATE_JSON)
@@ -37,17 +37,17 @@ public class ForageCraftMod
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
 	{
-		//Call config
+		// Call config
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 
-		//Load config
+		// Load config
 		config.load();
 
-		//leaves
+		// leaves
 		ConfigVariables.branchChance = config.getFloat("Branch chance", "Sticks from leaves", 1.0f, 0.0f, 1.0f, Descriptions.configBranchChance);
 		ConfigVariables.branchMaxAmount = config.getInt("Maximum branch amount", "Sticks from leaves", 1, 0, 64, Descriptions.configBranchMaxAmount);
 		
-		//grass block
+		// grass block
 		ConfigVariables.rootChance = config.getFloat("Root chance", "Sticks from grass blocks", 0.09f, 0.0f, 1.0f, Descriptions.configRootChance);
 		ConfigVariables.rootMaxAmount=config.getInt("Maximum root amount", "Sticks from grass blocks", 1, 0, 64, Descriptions.configRootMaxAmount);
 		
@@ -66,56 +66,63 @@ public class ForageCraftMod
 		ConfigVariables.wildBeetRootChance = config.getFloat("Beet root chance", "Beet roots from grass blocks", 0.01f, 0.0f, 1.0f, Descriptions.configWildBeetRootChance);
 		ConfigVariables.wildBeetRootMaxAmount = config.getInt("Maximum beet root amount", "Beet roots from grass blocks", 1, 0, 64, Descriptions.configWildBeetRootMaxAmount);
 		
-		//bones
+		// bones
 		ConfigVariables.buriedBonesChance = config.getFloat("Buried bones chance", "Buried Bones", 0.005f, 0.0f, 1.0f, Descriptions.configBuriedBonesChance);
 		ConfigVariables.buriedBonesMaxBoneAmount = config.getInt("Maximum buried bones amount", "Buried Bones", 9, 0, 64, Descriptions.configBuriedBonesMaxBoneAmount);
 		ConfigVariables.buriedBonesMaxSkullAmount = config.getInt("Maximum buried skull amount", "Buried Bones", 1, 0, 64, Descriptions.configBuriedBonesMaxSkullAmount);
 		
-		//dirt
+		// dirt
 		ConfigVariables.deepRootChance = config.getFloat("Deep root chance", "Sticks from dirt blocks", 0.07f, 0.0f, 1.0f, Descriptions.configDeepRootChance);
 		ConfigVariables.deepRootMaxAmount = config.getInt("Maximum deep root amount", "Sticks from dirt blocks", 1, 0, 64, Descriptions.configDeepRootMaxAmount);
 		
 		ConfigVariables.buriedFlintChance = config.getFloat("Buried Flint Chance", "Buried Flint", 0.04f, 0.0f, 1.0f, Descriptions.configBuriedFlintChance);
 		ConfigVariables.buriedFlintMaxAmount = config.getInt("Maximum buried flint amount", "Buried Flint", 1, 0, 64, Descriptions.configBuriedFlintMaxAmount);
 		
-		//stone
+		// stone
 		ConfigVariables.goldChance = config.getFloat("Gold chance", "Gold in stone", 0.005f, 0.0f, 1.0f, Descriptions.configGoldChance);
 		ConfigVariables.goldMaxAmount = config.getInt("Maximum gold amount", "Gold in stone", 1, 0, 64, Descriptions.configGoldMaxAmount);
 		
 		ConfigVariables.flintChipChance = config.getFloat("Flint chip chance", "Flint chips", 0.05f, 0.0f, 1.0f, Descriptions.configFlintChipChance);
 		ConfigVariables.flintChipMaxAmount = config.getInt("Maximum flint chip amount", "Flint chips", 1, 0, 64, Descriptions.configFlintChipMaxAmount);
 		
-		//coal ore
+		// coal ore
 		ConfigVariables.coalDiamondChance = config.getFloat("Coal diamond chance", "Coal gems", 0.001f, 0.0f, 1.0f, Descriptions.configCoalDiamondChance);
 		ConfigVariables.coalDiamondMaxAmount = config.getInt("Maximum coal diamond amount", "Coal gems", 1, 0, 64, Descriptions.configCoalDiamondMaxAmount);
 		
 		ConfigVariables.coalEmeraldChance = config.getFloat("Coal emerald chance", "Coal gems", 0.001f, 0.0f, 1.0f, Descriptions.configCoalEmeraldChance);
 		ConfigVariables.coalEmeraldMaxAmount = config.getInt("Maximum coal emerald amount", "Coal gems", 1, 0, 64, Descriptions.configCoalEmeraldMaxAmount);
 		
-		//nether quartz
+		// nether quartz
 		ConfigVariables.netherGoldChance = config.getFloat("Nether gold chance", "Nether gold", 1.0f, 0.0f, 1.0f, Descriptions.configNetherGoldChance);
 		ConfigVariables.netherGoldMaxAmount = config.getInt("Maximum nether gold amount", "Nether gold", 9, 0, 64, Descriptions.configNetherGoldMaxAmount);
 		
-		//seeds from grass
+		// seeds from grass
 		ConfigVariables.pumpkinSeeds = config.getBoolean("Pumpkin seeds from grass", "Pumpkin seeds", true, Descriptions.configPumpkinSeeds);
 		ConfigVariables.melonSeeds = config.getBoolean("Melon seeds from grass", "Melon seeds", true, Descriptions.configMelonSeeds);
 		ConfigVariables.beetrootSeeds = config.getBoolean("Beetroot seeds from grass", "Beetroot seeds", true, Descriptions.configBeetrootSeeds);
 
-		//JEI Integration
-		ConfigVariables.jeiNoInt = config.getBoolean("Disable JEI Integration", "Mod Integration", false, Descriptions.configJeiNoInt);
+		// Mod Integration
+		ConfigVariables.jeiInt = config.getBoolean("JEI Integration", "Mod Integration", false, Descriptions.configJeiInt);
 
-		//Disable sticks or rocks
-		ConfigVariables.disableSticks = config.getBoolean("Disable sticks generation", "World Generation", false, Descriptions.configDisableSticks);
-		ConfigVariables.disableRocks = config.getBoolean("Disable rocks generation", "World Generation", false, Descriptions.configDisableRocks);
+		// World Generation
+		ConfigVariables.enableSticks = config.getBoolean("Sticks generation", "World Generation", true, Descriptions.configEnableSticks);
+		ConfigVariables.enableRocks = config.getBoolean("Rocks generation", "World Generation", true, Descriptions.configEnableRocks);
 
-		//Save config
+		// Save config
 		config.save();
 
+		// Initialize Items
 		ModItems.init();
 		ModItems.register();
+
+		// Initialize Blocks
 		ModBlocks.init();
 		ModBlocks.register();
+
+		// Initialize Entities
 		ModEntities.init();
+
+		// Let's Do This
 		proxy.init();
 	}
 	
