@@ -57,5 +57,8 @@ public class ConfigVariables
 		public static boolean pumpkinSeeds;
 		public static boolean melonSeeds;
 		public static boolean beetrootSeeds;
-		//sticks from grass being removed 
+		//sticks from grass being removed
+
+		//JEI force stop vanilla
+		public static boolean jeiNoInt;
 }

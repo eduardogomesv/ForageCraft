@@ -34,9 +34,12 @@ public class ForageCraftMod
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
 	{
+		//Call config
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-		
+
+		//Load config
 		config.load();
+
 		//leaves
 		ConfigVariables.branchChance = config.getFloat("Branch chance", "Sticks from leaves", 1.0f, 0.0f, 1.0f, "The chance of a stick droping fom leaves");
 		ConfigVariables.branchMaxAmount = config.getInt("Maximum branch amount", "Sticks from leaves", 1, 0, 64, "The maximum number of sticks you can get from leaves");
@@ -46,7 +49,7 @@ public class ForageCraftMod
 		ConfigVariables.rootMaxAmount=config.getInt("Maximum root amount", "Sticks from grass blocks", 1, 0, 64, "The maximum amount of roots (sticks) you can get from a grass block");
 		
 		ConfigVariables.rockChance = config.getFloat("Rock chance", "Rocks from various blocks", 0.09f, 0.0f, 1.0f, "The chance of digging up a rock");
-		ConfigVariables.rockMaxAmount=config.getInt("Maximum rock amount", "Rocks from various blocks", 1, 0, 64, "The maximum amount of rocks you can get from various blocks");
+		ConfigVariables.rockMaxAmount = config.getInt("Maximum rock amount", "Rocks from various blocks", 1, 0, 64, "The maximum amount of rocks you can get from various blocks");
 		
 		ConfigVariables.wildCarrotChance = config.getFloat("Carrot chance", "Carrots from grass blocks", 0.01f, 0.0f, 1.0f, "The chance of digging up a carrot from a grass block");
 		ConfigVariables.wildCarrotMaxAmount = config.getInt("Maximum carrot amount", "Carrots from grass blocks", 1, 0, 64, "The maximum amount of carrots you can get from a grass block");
@@ -94,6 +97,11 @@ public class ForageCraftMod
 		ConfigVariables.pumpkinSeeds = config.getBoolean("Pumpkin seeds from grass", "Pumpkin seeds", true, "This determines whether or not you can find pumpkin seeds in grass");
 		ConfigVariables.melonSeeds = config.getBoolean("Melon seeds from grass", "Melon seeds", true, "This determines whether or not you can find melon seeds in grass");
 		ConfigVariables.beetrootSeeds = config.getBoolean("Beetroot seeds from grass", "Beetroot seeds", true, "This determines whether or not you can find beetroot seeds in grass");
+
+		//JEI Integration
+		ConfigVariables.jeiNoInt = config.getBoolean("Disable JEI Integration", "integration", false, "Set this to true if you want to disable JEI descriptions for vanilla items");
+
+		//Save config
 		config.save();
 
 		ModItems.init();
