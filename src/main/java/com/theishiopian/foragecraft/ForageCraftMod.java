@@ -12,6 +12,7 @@ import com.theishiopian.foragecraft.proxy.CommonProxy;
 import com.theishiopian.foragecraft.world.generation.FCMasterWorldGenerator;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -99,7 +100,11 @@ public class ForageCraftMod
 		ConfigVariables.beetrootSeeds = config.getBoolean("Beetroot seeds from grass", "Beetroot seeds", true, "This determines whether or not you can find beetroot seeds in grass");
 
 		//JEI Integration
-		ConfigVariables.jeiNoInt = config.getBoolean("Disable JEI Integration", "integration", false, "Set this to true if you want to disable JEI descriptions for vanilla items");
+		ConfigVariables.jeiNoInt = config.getBoolean("Disable JEI Integration", "Mod Integration", false, "Set this to true if you want to disable JEI descriptions for vanilla items");
+
+		//Disable sticks or rocks
+		ConfigVariables.disableSticks = config.getBoolean("Disable sticks generation", "World Generation", false, "Set this to true if you want to disable sticks generation");
+		ConfigVariables.disableRocks = config.getBoolean("Disable rocks generation", "World Generation", false, "Set this to true if you want to disable rocks generation");
 
 		//Save config
 		config.save();

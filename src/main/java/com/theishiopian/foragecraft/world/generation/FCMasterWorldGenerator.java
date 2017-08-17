@@ -1,6 +1,8 @@
 package com.theishiopian.foragecraft.world.generation;
 
 import java.util.Random;
+
+import com.theishiopian.foragecraft.ConfigVariables;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -36,6 +38,7 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		}
 	}
 
+	//TODO
 	private void generateNether(World world, Random rand, int blockX, int blockZ)
 	{
 
@@ -43,8 +46,6 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 
 	private void generateOverworld(World world, Random rand, int blockX, int blockZ)
 	{
-
-
 		WorldGenerator rocky = new RockGenerator();
 		WorldGenerator sticky = new StickGenerator();
 
@@ -54,34 +55,43 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		int stickRange = MIN + rand.nextInt(MAX - MIN);
 		BlockPos biomeCheckPos = new BlockPos(blockX, 64, blockZ);
 		
-		//rocks can be found everywhere, even mushroom isles
-		for (int i = 0; i < rockRange; i++)
+		//If the player decides to disable rocks.
+		if(!ConfigVariables.disableRocks)
 		{
-			
-			int randX = blockX + rand.nextInt(16);
-			int randY = rand.nextInt(255);
-			int randZ = blockZ + rand.nextInt(16);
-			BlockPos pos = new BlockPos(randX, randY, randZ);
-			rocky.generate(world, rand, pos);
+			//rocks can be found everywhere, even mushroom isles
+			for (int i = 0; i < rockRange; i++)
+			{
+				int randX = blockX + rand.nextInt(16);
+				int randY = rand.nextInt(255);
+				int randZ = blockZ + rand.nextInt(16);
+				BlockPos pos = new BlockPos(randX, randY, randZ);
+				rocky.generate(world, rand, pos);
+			}
 		}
-		
+
+		//What's the if statement for??? What does it deactivate??? - Jonathan
 		if
 		(
 			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.FOREST)||
 			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.JUNGLE)||
 			BiomeDictionary.hasType(world.getBiome(biomeCheckPos), BiomeDictionary.Type.SWAMP)
 		)
-		for (int i = 0; i < stickRange; i++)
-		{
-			int randX = blockX + rand.nextInt(16);
-			int randY = rand.nextInt(255);//I long for cubic chunks :(
-			int randZ = blockZ + rand.nextInt(16);
-			
-			sticky.generate(world, rand, new BlockPos(randX, randY, randZ));
-		}
 
+		//If the player decides to disable sticks
+		if(!ConfigVariables.disableSticks)
+		{
+			for (int i = 0; i < stickRange; i++)
+			{
+				int randX = blockX + rand.nextInt(16);
+				int randY = rand.nextInt(255);//I long for cubic chunks :(
+				int randZ = blockZ + rand.nextInt(16);
+
+				sticky.generate(world, rand, new BlockPos(randX, randY, randZ));
+			}
+		}
 	}
 
+	//TODO
 	private void generateEnd(World world, Random rand, int blockX, int blockZ)
 	{
 

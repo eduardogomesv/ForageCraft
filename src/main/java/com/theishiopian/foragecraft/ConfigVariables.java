@@ -61,4 +61,8 @@ public class ConfigVariables
 
 		//JEI force stop vanilla
 		public static boolean jeiNoInt;
+
+		//Disable sticks or rocks
+		public static boolean disableSticks;
+		public static boolean disableRocks;
 }
