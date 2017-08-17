@@ -101,7 +101,7 @@ public class RockItem extends ItemBlock
 	@Override
 	public float getStrVsBlock(ItemStack stack, IBlockState state)
     {
-		//anything will break faster if you hit it with a rock enough
+		// anything will break faster if you hit it with a rock enough
 		int e = 0;
 		
 		switch(type)

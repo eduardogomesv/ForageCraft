@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BlockForageHandler
 {
-	//RNG's for randomness
+	// RNG's for randomness
 	public static Random CHANCE = new java.util.Random();
 	public static Random AMOUNT = new java.util.Random();
 
@@ -26,7 +26,7 @@ public class BlockForageHandler
 		if(!world.isRemote)
 		{
 			Block target = event.getState().getBlock();
-			//leaves handler
+			// leaves handler
 			if(target==Blocks.LEAVES||target==Blocks.LEAVES2)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.branchChance)
@@ -34,7 +34,7 @@ public class BlockForageHandler
 					event.getDrops().add(new ItemStack(Items.STICK,AMOUNT.nextInt(ConfigVariables.branchMaxAmount+1)));
 				}
 			}
-			//grass block handler
+			// grass block handler
 			if(target==Blocks.GRASS)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.rootChance)
@@ -67,7 +67,7 @@ public class BlockForageHandler
 					event.getDrops().add(new ItemStack(Items.SKULL,AMOUNT.nextInt(ConfigVariables.buriedBonesMaxSkullAmount+1)));
 				}
 			}
-			//dirt handler
+			// dirt handler
 			if(target==Blocks.DIRT)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.deepRootChance)
@@ -88,7 +88,7 @@ public class BlockForageHandler
 					event.getDrops().add(new ItemStack(Items.SKULL,AMOUNT.nextInt(ConfigVariables.buriedBonesMaxSkullAmount+1)));
 				}
 			}
-			//stone handler
+			// stone handler
 			if(target==Blocks.STONE)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.goldChance)
@@ -104,7 +104,7 @@ public class BlockForageHandler
 					event.getDrops().add(new ItemStack(Items.FLINT,AMOUNT.nextInt(ConfigVariables.flintChipMaxAmount+1)));
 				}
 			}
-			//coal_ore handler
+			// coal_ore handler
 			if(target==Blocks.COAL_ORE)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.coalDiamondChance)
@@ -116,7 +116,7 @@ public class BlockForageHandler
 					event.getDrops().add(new ItemStack(Items.EMERALD,AMOUNT.nextInt(ConfigVariables.coalEmeraldMaxAmount+1)));
 				}
 			}
-			//nether quartz handler
+			// nether quartz handler
 			if(target==Blocks.QUARTZ_ORE)
 			{	
 				if(CHANCE.nextFloat()<ConfigVariables.netherGoldChance)
@@ -124,7 +124,7 @@ public class BlockForageHandler
 				event.getDrops().add(new ItemStack(Items.GOLD_NUGGET,AMOUNT.nextInt(ConfigVariables.netherGoldMaxAmount+1)));
 				}
 			}
-			//gravel handler
+			// gravel handler
 			if(target==Blocks.GRAVEL)
 			{
 				if(CHANCE.nextFloat()<ConfigVariables.rockChance)

@@ -12,6 +12,7 @@ import net.minecraft.world.WorldSavedData;
 import net.minecraft.world.storage.MapStorage;
 import net.minecraftforge.common.util.Constants;
 
+// Fuckin hate the scarecrow problems
 public class ScarecrowTracking extends WorldSavedData
 {
 
@@ -37,14 +38,14 @@ public class ScarecrowTracking extends WorldSavedData
 		return instance;
 	}
 
-	//adds scarecrow to list
+	// adds scarecrow to list
 	public void addScarecrow(BlockPos pos)
 	{
 		scarecrowLocations.add(pos);
 		System.out.println("Registering Scarecrow");
 	}
 
-	//removes scarecrow from list
+	// removes scarecrow from list
 	public void removeScarecrow(BlockPos pos)
 	{
 		scarecrowLocations.remove(pos);

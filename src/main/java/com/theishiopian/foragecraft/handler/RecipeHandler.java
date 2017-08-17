@@ -22,7 +22,7 @@ public class RecipeHandler {
 		Item leather = Items.LEATHER;
 		Item rock = Item.getByNameOrId("foragecraft:rock_normal");
 		Item flat = Item.getByNameOrId("foragecraft:rock_flat");
-		//TODO cleanup a bit
+		// TODO cleanup a bit
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE,9,15),Items.SKULL);
 		GameRegistry.addShapelessRecipe(new ItemStack(bundle,1,0),stick,stick,stick,stick,stick,stick,stick,stick,stick);
 		GameRegistry.addShapelessRecipe(new ItemStack(stick,9,0),bundle);

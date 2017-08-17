@@ -15,5 +15,5 @@ public class FuelHandler implements IFuelHandler {
 	}
 }
 
-//REMEMBER: always mutliply the amount of seconds by 20, since minecraft had too much coffee 
-//and measures time in 1/20th of a second increments
+// REMEMBER: always mutliply the amount of seconds by 20, since minecraft had too much coffee
+// and measures time in 1/20th of a second increments

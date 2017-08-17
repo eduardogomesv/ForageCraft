@@ -25,7 +25,7 @@ public class SpawnHandler
 				if(event.getEntity() instanceof EntityBat)
 				{
 					event.setResult(Result.DENY);
-					//I hate bats
+					// I hate bats
 				}
 			}
 		}

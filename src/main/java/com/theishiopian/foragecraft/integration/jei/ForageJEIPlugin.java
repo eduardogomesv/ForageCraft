@@ -15,9 +15,9 @@ public class ForageJEIPlugin extends BlankModPlugin
     @Override
     public void register(IModRegistry registry) {
 
-        //IJeiHelpers jeiHelpers = registry.getJeiHelpers();
-    	//is this unused?
-        //I think so
+        // IJeiHelpers jeiHelpers = registry.getJeiHelpers();
+    	// is this unused?
+        // I think so
 
         if(ConfigVariables.jeiVanillaInt) {
             registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick");
