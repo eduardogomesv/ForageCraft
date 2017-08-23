@@ -21,9 +21,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-// Unused imports?
-import net.minecraftforge.common.config.Config;
-
 @Mod(modid=Reference.MODID,name=Reference.NAME,version=Reference.VERSION,acceptedMinecraftVersions=Reference.MC_VERSIONS,updateJSON=Reference.UPDATE_JSON)
 
 public class ForageCraftMod 

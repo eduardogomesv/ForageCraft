@@ -6,10 +6,12 @@ import com.theishiopian.foragecraft.ConfigVariables;
 import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.BiomeDictionary;
 
@@ -38,11 +40,13 @@ public class RockGenerator extends WorldGenerator
 
 		Block toReplace = worldIn.getBlockState(rp).getBlock();
 
+		Biome biome = worldIn.getBiome(pos);
+		
 		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && worldIn.getBlockState(rp.down()).isSideSolid(worldIn, pos, EnumFacing.UP))
 		{
-			//TODO: add sandstone rocks or something similar
-			if(!BiomeDictionary.hasType(worldIn.getBiome(pos), BiomeDictionary.Type.SANDY))
-				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
+			//TODO: add sandstone rocks or something similar. Also seashells
+			if(!BiomeDictionary.hasType(biome, BiomeDictionary.Type.SANDY))
+				if(biome != Biomes.BEACH)worldIn.setBlockState(rp, rock.getDefaultState(), 2);
 			else if(!worldIn.canSeeSky(pos))
 				worldIn.setBlockState(rp, rock.getDefaultState(), 2);
 
