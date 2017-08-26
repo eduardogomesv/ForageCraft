@@ -2,6 +2,8 @@ package com.theishiopian.foragecraft.world;
 
 import java.util.LinkedHashSet;
 
+import com.theishiopian.foragecraft.ConfigVariables;
+import com.theishiopian.foragecraft.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -12,9 +14,18 @@ import net.minecraft.world.WorldSavedData;
 import net.minecraft.world.storage.MapStorage;
 import net.minecraftforge.common.util.Constants;
 
+/*
+/  Logger based from Tinkers' Construct
+/  https://github.com/SlimeKnights/TinkersConstruct/blob/08f7180399ca8ad4717493dd0aa5a63b7aa14584/src/main/java/slimeknights/tconstruct/TConstruct.java
+*/
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Fuckin hate the scarecrow problems
 public class ScarecrowTracking extends WorldSavedData
 {
+	public static final Logger log = LogManager.getLogger(Reference.SHORT_NAME);
 
 	private final LinkedHashSet<BlockPos>scarecrowLocations = new LinkedHashSet<BlockPos>();
 	private final static String NAME = "foragecraft:scarecrows";
@@ -42,14 +53,20 @@ public class ScarecrowTracking extends WorldSavedData
 	public void addScarecrow(BlockPos pos)
 	{
 		scarecrowLocations.add(pos);
-		System.out.println("Registering Scarecrow");
+		if(ConfigVariables.developerMode)
+		{
+			log.info("Registering Scarecrow");
+		}
 	}
 
 	// removes scarecrow from list
 	public void removeScarecrow(BlockPos pos)
 	{
 		scarecrowLocations.remove(pos);
-		System.out.println("Unregistering Scarecrow");
+		if(ConfigVariables.developerMode)
+		{
+			log.info("Unregistering Scarecrow");
+		}
 	}
 
 	@Override
