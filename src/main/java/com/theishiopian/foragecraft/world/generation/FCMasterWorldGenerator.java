@@ -16,7 +16,6 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class FCMasterWorldGenerator implements IWorldGenerator
 {
-
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider)
@@ -38,7 +37,7 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		}
 	}
 
-	// TODO
+	// TODO Make shit for the nether
 	private void generateNether(World world, Random rand, int blockX, int blockZ)
 	{
 
