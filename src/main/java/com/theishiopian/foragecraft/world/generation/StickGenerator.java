@@ -36,7 +36,11 @@ public class StickGenerator extends WorldGenerator
 
 		BlockPos sp = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
 
+		BlockPos spUnder = new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ());
+
 		Block toReplace = worldIn.getBlockState(sp).getBlock();
+
+		Block onTopOf = worldIn.getBlockState(spUnder).getBlock();
 
 		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && (worldIn.getBlockState(sp.down()).isSideSolid(worldIn, pos, EnumFacing.UP)&&worldIn.getBlockState(sp.down()).getBlock()==Blocks.GRASS)&&pos.getY()>64)
 		{
@@ -44,7 +48,7 @@ public class StickGenerator extends WorldGenerator
 
 			if(ConfigVariables.developerMode)
 			{
-				log.info("Generating stick at X: " + sp.getX() + " Y: " + sp.getY() + " Z: " + sp.getZ());
+				log.info("Generating stick at X: " + sp.getX() + " Y: " + sp.getY() + " Z: " + sp.getZ() + " on top of " + onTopOf + ".");
 			}
 		}
 
