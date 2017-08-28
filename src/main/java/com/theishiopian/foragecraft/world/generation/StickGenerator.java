@@ -3,6 +3,7 @@ package com.theishiopian.foragecraft.world.generation;
 import java.util.Random;
 
 import com.theishiopian.foragecraft.ConfigVariables;
+import com.theishiopian.foragecraft.Reference;
 import com.theishiopian.foragecraft.init.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -13,11 +14,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-// Based on sky_01's MC forums tutorial:
-// http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2666351-1-8-x-and-1-9-structure-generation-tutorial
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+/*
+/  World generation based on sky_01's MC forums tutorial
+/  http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2666351-1-8-x-and-1-9-structure-generation-tutorial
+/
+/  Logger based from Tinkers' Construct
+/  https://github.com/SlimeKnights/TinkersConstruct/blob/08f7180399ca8ad4717493dd0aa5a63b7aa14584/src/main/java/slimeknights/tconstruct/TConstruct.java
+*/
 
 public class StickGenerator extends WorldGenerator
 {
+	public static final Logger log = LogManager.getLogger(Reference.SHORT_NAME);
+
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos pos)
 	{
@@ -33,7 +44,7 @@ public class StickGenerator extends WorldGenerator
 
 			if(ConfigVariables.developerMode)
 			{
-				System.out.println("Generating rock at X: " + sp.getX() + " Y: " + sp.getY() + " Z: " + sp.getZ());
+				log.info("Generating stick at X: " + sp.getX() + " Y: " + sp.getY() + " Z: " + sp.getZ());
 			}
 		}
 

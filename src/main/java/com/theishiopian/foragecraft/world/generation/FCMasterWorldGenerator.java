@@ -11,12 +11,13 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-// Based on sky_01's MC forums tutorial:
-// http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2666351-1-8-x-and-1-9-structure-generation-tutorial
+/*
+/  World generation based on sky_01's MC forums tutorial
+/  http://www.minecraftforum.net/forums/mapping-and-modding/mapping-and-modding-tutorials/2666351-1-8-x-and-1-9-structure-generation-tutorial
+*/
 
 public class FCMasterWorldGenerator implements IWorldGenerator
 {
-
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider)
@@ -38,7 +39,7 @@ public class FCMasterWorldGenerator implements IWorldGenerator
 		}
 	}
 
-	// TODO
+	// TODO Make shit for the nether
 	private void generateNether(World world, Random rand, int blockX, int blockZ)
 	{
 

@@ -14,7 +14,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 public class RenderRockFlat extends RenderSnowball<EntityRockFlat>
 {
 
-	public static final Factory FACTORY = new Factory();
+	public static final Factory FACTORY = new Factory(); // Rev up those fryers
 	
 	
 

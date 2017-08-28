@@ -16,9 +16,8 @@ public class ForageJEIPlugin extends BlankModPlugin
     public void register(IModRegistry registry) {
 
         // IJeiHelpers jeiHelpers = registry.getJeiHelpers();
-    	// is this unused?
-        // I think so
 
+        // Deprecated methods
         if(ConfigVariables.jeiVanillaInt) {
             registry.addDescription(new ItemStack(Items.STICK), "jei.description.foraging.stick");
             registry.addDescription(new ItemStack(Items.CARROT), "jei.description.foraging.carrot");
