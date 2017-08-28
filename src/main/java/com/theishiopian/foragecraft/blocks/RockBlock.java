@@ -6,6 +6,7 @@ import com.theishiopian.foragecraft.init.ModBlocks;
 import com.theishiopian.foragecraft.init.ModBlocks.RockType;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,8 +22,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class RockBlock extends Block
-
+public class RockBlock extends BlockFalling
+//all the rocks are falling down, falling down, falling down
+//all the rocks are falling down, my fair Jonathan
 {
 	RockType type;
 	
@@ -64,6 +66,16 @@ public class RockBlock extends Block
 	{
 		return null;
 	}
+	
+//	@Override
+//	public void onNeighborChange(IBlockAccess world, BlockPos pos, BlockPos neighbor) 
+//	{
+//		System.out.println("crack");
+//		if(neighbor == pos.down())
+//		{
+//			((World) world).setBlockToAir(pos);
+//		}
+//	}
 
 	@Override
 	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state)
