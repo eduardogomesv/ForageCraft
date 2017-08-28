@@ -60,11 +60,17 @@ public class RockGenerator extends WorldGenerator
 
 		BlockPos rp = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
 
+		BlockPos rpUnder = new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ());
+
 		Block toReplace = worldIn.getBlockState(rp).getBlock();
+
+		Block onTopOf = worldIn.getBlockState(rpUnder).getBlock();
 
 		Biome biome = worldIn.getBiome(pos);
 		
-		if((toReplace == Blocks.AIR ||toReplace == Blocks.TALLGRASS) && worldIn.getBlockState(rp.down()).isSideSolid(worldIn, pos, EnumFacing.UP))
+		if((toReplace == Blocks.AIR || toReplace == Blocks.TALLGRASS)
+				&& (onTopOf != Blocks.RED_MUSHROOM_BLOCK && onTopOf != Blocks.BROWN_MUSHROOM_BLOCK)
+				&& worldIn.getBlockState(rp.down()).isSideSolid(worldIn, pos, EnumFacing.UP))
 		{
 			//TODO: add sandstone rocks or something similar. Also seashells
 			// TODO: Maybe also remove the desert biome along with the beach biome for generation? - Jonathan
@@ -79,10 +85,10 @@ public class RockGenerator extends WorldGenerator
 				switch(whatRock)
 				{
 					case 0:
-						log.info("Generating rock at X: " + rp.getX() + " Y: " + rp.getY() + " Z: " + rp.getZ());
+						log.info("Generating rock at X: " + rp.getX() + " Y: " + rp.getY() + " Z: " + rp.getZ() + " on top of " + onTopOf + ".");
 						break;
 					case 1:
-						log.info("Generating flat rock at X: " + rp.getX() + " Y: " + rp.getY() + " Z: " + rp.getZ());
+						log.info("Generating flat rock at X: " + rp.getX() + " Y: " + rp.getY() + " Z: " + rp.getZ() + " on top of " + onTopOf + ".");
 				}
 			}
 		}
